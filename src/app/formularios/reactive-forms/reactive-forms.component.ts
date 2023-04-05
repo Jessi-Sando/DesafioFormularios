@@ -6,6 +6,7 @@ import { AbstractControl, FormBuilder, FormControl, FormGroup, Validators } from
   templateUrl: './reactive-forms.component.html',
   styleUrls: ['./reactive-forms.component.css']
 })
+
 export class ReactiveFormsComponent {
 
   emailControl = new FormControl(
@@ -21,7 +22,7 @@ export class ReactiveFormsComponent {
   constructor(public formBuilder: FormBuilder) {
 
     this.registerForm = this.formBuilder.group({
-      nombre: ['', [ Validators.required, Validators.minLength(3)] ],
+      nombre: ['', [ Validators.required, Validators.minLength(4)] ],
       apellido: ['', [ Validators.required] ],
       email: this.emailControl,
       localizacion: this.formBuilder.group({
